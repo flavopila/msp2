@@ -1,4 +1,12 @@
+@import url("../fonts/fonts.css"); /* Importing the custom font defined in fonts.css */
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+
+  body {
+    background-color: #1a1a2e;
+    font-family: 'Jura', serif;
+    color: #e0e0e0;
   }
