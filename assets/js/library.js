@@ -1,4 +1,4 @@
-const exerciseLibrary = [
+export const exerciseLibrary = [
   {
     name: "Barbell Back Squat",
     type: "compound",
@@ -28,14 +28,14 @@ const exerciseLibrary = [
     equipment: "free weight"
   },
   {
-    name: "Pull‑Up",
+    name: "Pullup",
     type: "compound",
     primaryMuscleGroup: "lats",
     secondaryMuscleGroup: "biceps, upper back",
     equipment: "bodyweight"
   },
   {
-    name: "One‑Arm Dumbbell Row",
+    name: "Dumbbell Row",
     type: "compound",
     primaryMuscleGroup: "lats",
     secondaryMuscleGroup: "mid back, biceps",
@@ -70,6 +70,3 @@ const exerciseLibrary = [
     equipment: "free weight"
   }
 ];
-
-
-
