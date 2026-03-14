@@ -26,4 +26,12 @@ html {
     background-color: rgba(201, 168, 76, 0.25);
     border-color: #e0c878;
     transform: scale(1.09);
+  } 
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #c9a84c;
+    border-radius: 20px;
+    color: #e0e0e0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   }
