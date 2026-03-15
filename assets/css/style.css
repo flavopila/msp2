@@ -11,12 +11,18 @@ html {
     color: #e0e0e0;
   }
 
-  .btn {
+  .outline {
     font-family: "Jura", serif;
-    color: #c9a84c;
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid #c9a84c;
-    border-radius: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    margin-top: 0.5rem;
+  }
+
+  .btn {
+    color: #c9a84c; /* overrides .outline color because of load order */
     padding: 0.5rem 1.25rem;
     transition: 0.5s ease, transform 1s ease;
   }
@@ -28,10 +34,8 @@ html {
     transform: scale(1.09);
   } 
 
-  .card {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #c9a84c;
-    border-radius: 20px;
-    color: #e0e0e0;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  .windowpane {
+    padding: 1rem;
+    min-height: 80vh;
+    font-size: 1rem;
   }
