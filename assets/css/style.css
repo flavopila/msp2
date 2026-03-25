@@ -36,7 +36,9 @@ html {
     height: 80vh;
     font-size: 1rem;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff2d #00000000;
   }
 
   .header-row {
