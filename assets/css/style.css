@@ -12,23 +12,20 @@ html {
   }
 
   .outline {
-    font-family: "Jura", serif;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #000;
     border: 1px solid #c9a84c;
     border-radius: 20px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
     margin-top: 0.5rem;
   }
 
   .btn {
-    color: #c9a84c; /* overrides .outline color because of load order */
+    color: #c9a84c; /* so text can transition to white on hover, overrides .outline color because of load order */
     padding: 0.5rem 1.25rem;
     transition: 0.5s ease, transform 1s ease;
   }
   
   .btn:hover {
-    color: #fff;
     background-color: rgba(201, 168, 76, 0.25);
     border-color: #e0c878;
     transform: scale(1.09);
@@ -36,6 +33,44 @@ html {
 
   .windowpane {
     padding: 1rem;
-    min-height: 80vh;
+    height: 80vh;
     font-size: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header-row {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  #lift-library {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .lift-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .lift-img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  }
+
+  .lift-name {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
   }

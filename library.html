@@ -11,9 +11,14 @@
   </head>
   <body>
     <main class="container-fluid p-4">
-      <a href="index.html" class="btn outline mb-3">← Back</a>
-      <h1>Library</h1>
-      <div class="windowpane outline"></div>
+      <div class="header-row mb-3">
+        <a href="index.html" class="btn outline">← Back</a>
+        <h2>Library</h2>
+      </div>
+      <div id="lift-library" class="windowpane outline">
+        Something went wrong. Click <a href="library.html">here</a> to refresh. <!-- fallback content if JavaScript somehow fails -->
+      </div> 
     </main>
+    <script type="module" src="./assets/js/library.js"></script>
   </body>
 </html>

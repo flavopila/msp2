@@ -1,82 +1,30 @@
-export const exerciseLibrary = [
-  {
-    name: "Barbell Back Squat",
-    type: "compound",
-    primaryMuscleGroup: "quadriceps",
-    secondaryMuscleGroup: "glutes, hamstrings",
-    equipment: "free weight",
-    image: "../img/lifts/barbell-back-squat.webp"
-  },
-  {
-    name: "Barbell Bench Press",
-    type: "compound",
-    primaryMuscleGroup: "chest",
-    secondaryMuscleGroup: "triceps, front deltoids",
-    equipment: "free weight",
-    image: "../img/lifts/barbell-bench-press.webp"
-  },
-  {
-    name: "Conventional Deadlift",
-    type: "compound",
-    primaryMuscleGroup: "hamstrings",
-    secondaryMuscleGroup: "glutes, lower back",
-    equipment: "free weight",
-    image: "../img/lifts/conventional-deadlift.webp"
-  },
-  {
-    name: "Overhead Press",
-    type: "compound",
-    primaryMuscleGroup: "shoulders",
-    secondaryMuscleGroup: "triceps, upper chest",
-    equipment: "free weight",
-    image: "../img/lifts/overhead-press.webp"
-  },
-  {
-    name: "Pullup",
-    type: "compound",
-    primaryMuscleGroup: "lats",
-    secondaryMuscleGroup: "biceps, upper back",
-    equipment: "bodyweight",
-    image: "../img/lifts/pullup.webp"
-  },
-  {
-    name: "Dumbbell Row",
-    type: "compound",
-    primaryMuscleGroup: "lats",
-    secondaryMuscleGroup: "mid back, biceps",
-    equipment: "free weight",
-    image: "../img/lifts/dumbbell-row.webp"
-  },
-  {
-    name: "Romanian Deadlift",
-    type: "compound",
-    primaryMuscleGroup: "hamstrings",
-    secondaryMuscleGroup: "glutes, lower back",
-    equipment: "free weight",
-    image: "../img/lifts/romanian-deadlift.webp"
-  },
-  {
-    name: "Dumbbell Lateral Raise",
-    type: "isolation",
-    primaryMuscleGroup: "side deltoids",
-    secondaryMuscleGroup: "upper traps",
-    equipment: "free weight",
-    image: "../img/lifts/dumbbell-lateral-raise.webp"
-  },
-  {
-    name: "Cable Triceps Pushdown",
-    type: "isolation",
-    primaryMuscleGroup: "triceps",
-    secondaryMuscleGroup: "none",
-    equipment: "machine",
-    image: "../img/lifts/cable-triceps-pushdown.webp"
-  },
-  {
-    name: "Dumbbell Biceps Curl",
-    type: "isolation",
-    primaryMuscleGroup: "biceps",
-    secondaryMuscleGroup: "forearms",
-    equipment: "free weight",
-    image: "../img/lifts/dumbbell-biceps-curl.webp"
-  }
-];
+import { liftLibrary } from "./lifts.js"; /* import lift library */
+
+const libraryDiv = document.getElementById("lift-library"); /* set lift-library element as a constant */
+
+function renderLibrary() {
+  libraryDiv.innerHTML = ""; /* clear libraryDiv upon function call */
+
+  liftLibrary.forEach((lift) => { /* iterate through liftLibrary array */
+    const liftCard = document.createElement("article"); /* create article element for each lift */
+    liftCard.className = "lift-card"; /* add styling class to liftCard */
+
+    const img = document.createElement("img"); /* create img element for each lift */
+    img.className = "lift-img"; /* add styling class to img */
+    img.src = new URL(lift.image, import.meta.url).href; /* set img src to lift image */
+    img.alt = lift.name; /* accessibility alt text for img */
+    img.loading = "lazy"; /* img only loads when close to viewport */
+
+    const name = document.createElement("p"); /* create p element for each lift */
+    name.className = "lift-name"; /* add styling class to p element */
+    name.textContent = lift.name; /* set p text to lift name */
+
+    liftCard.appendChild(img); /* add img to liftCard */
+    liftCard.appendChild(name); /* add name to liftCard */
+
+    libraryDiv.appendChild(liftCard); /* add liftCard to libraryDiv */
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderLibrary);
+/* once page is loaded, render the library */
